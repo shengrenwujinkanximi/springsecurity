@@ -1,0 +1,31 @@
+spring:
+  thymeleaf:
+    mode: HTML
+    cache: false
+    prefix: classpath:/templates
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tms
+    username: postgres
+    password: postgres
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    show-sql: true
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        min-idle: 8
+        max-idle: 8
+        max-active: 8
+        max-wait: 1
+    database: 0
+server:
+  port: 8090
+  servlet:
+    context-path: /

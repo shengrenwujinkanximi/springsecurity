@@ -1,0 +1,314 @@
+2021-01-04 11:28:51.981 [restartedMain] INFO  com.zwb.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-04 11:28:54.116 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+2021-01-04 11:28:54.117 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-04 11:28:54.117 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-01-04 11:28:54.235 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-01-04 11:28:54.786 [task-1] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-04 11:28:54.846 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.22.Final
+2021-01-04 11:28:54.939 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-04 11:28:54.942 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2021-01-04 11:28:54.953 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-04 11:28:54.953 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-04 11:28:54.954 [restartedMain] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2021-01-04 11:28:54.954 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-04 11:28:54.955 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-01-04 11:28:54.955 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-04 11:28:55.017 [task-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-01-04 11:28:55.134 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-01-04 11:28:56.584 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-04 11:28:56.606 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-04 11:28:56.606 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-04 11:28:56.606 [restartedMain] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2021-01-04 11:28:56.606 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-04 11:28:56.607 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-04 11:28:56.607 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-04 11:28:56.607 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@781c07dd
+2021-01-04 11:28:58.225 [task-1] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:303) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.18.jar:42.2.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_271]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_271]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_271]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_271]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_271]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81) ~[?:1.8.0_271]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[?:1.8.0_271]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[?:1.8.0_271]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[?:1.8.0_271]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[?:1.8.0_271]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[?:1.8.0_271]
+	at java.net.Socket.connect(Socket.java:606) ~[?:1.8.0_271]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.18.jar:42.2.18]
+	... 34 more
+2021-01-04 11:28:58.238 [task-1] WARN  org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata : Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2021-01-04 11:28:58.358 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-01-04 11:28:59.005 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-01-04 11:29:02.059 [task-1] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:303) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:51) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:225) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.makeConnection(Driver.java:465) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.Driver.connect(Driver.java:264) ~[postgresql-42.2.18.jar:42.2.18]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-3.4.5.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-3.4.5.jar:?]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:40) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:65) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:59) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:155) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:96) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:184) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:316) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:469) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259) ~[hibernate-core-5.4.22.Final.jar:5.4.22.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391) ~[spring-orm-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_271]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_271]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_271]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_271]
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[?:1.8.0_271]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:81) ~[?:1.8.0_271]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476) ~[?:1.8.0_271]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218) ~[?:1.8.0_271]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200) ~[?:1.8.0_271]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162) ~[?:1.8.0_271]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394) ~[?:1.8.0_271]
+	at java.net.Socket.connect(Socket.java:606) ~[?:1.8.0_271]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:231) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:95) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:98) ~[postgresql-42.2.18.jar:42.2.18]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:213) ~[postgresql-42.2.18.jar:42.2.18]
+	... 32 more
+2021-01-04 11:29:02.060 [task-1] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08001
+2021-01-04 11:29:02.060 [task-1] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Connection to localhost:5432 refused. Check that the hostname and port are correct and that the postmaster is accepting TCP/IP connections.
+2021-01-04 11:29:02.070 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+2021-01-04 11:29:02.305 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-04 11:29:02.341 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-01-04 11:29:02.341 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-01-04 11:29:02.341 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-01-04 11:29:02.347 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-01-04 11:29:02.347 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2021-01-04 11:29:02.348 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-01-04 11:29:02.372 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8091"]
+2021-01-04 11:29:02.503 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-01-04 11:29:02.507 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8091"]
+2021-01-04 11:29:02.554 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8091"]
+2021-01-04 11:30:38.084 [restartedMain] INFO  com.zwb.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-04 11:30:39.850 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+2021-01-04 11:30:39.850 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-04 11:30:39.850 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-01-04 11:30:39.961 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-01-04 11:30:40.454 [task-1] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-04 11:30:40.500 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.22.Final
+2021-01-04 11:30:40.603 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-04 11:30:40.605 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2021-01-04 11:30:40.616 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-04 11:30:40.616 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-04 11:30:40.617 [restartedMain] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2021-01-04 11:30:40.617 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-04 11:30:40.617 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-01-04 11:30:40.618 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-04 11:30:40.631 [task-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-01-04 11:30:40.717 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-01-04 11:30:40.819 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-01-04 11:30:40.836 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-01-04 11:30:41.668 [task-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-04 11:30:42.229 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-04 11:30:42.230 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-04 11:30:42.230 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-04 11:30:42.230 [restartedMain] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2021-01-04 11:30:42.230 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-04 11:30:42.231 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-04 11:30:42.232 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-04 11:30:42.232 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5d87f0e
+2021-01-04 11:30:42.588 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+2021-01-04 11:30:42.800 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-04 11:30:43.204 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：test1
+2021-01-04 11:30:43.204 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：name1
+2021-01-04 11:30:43.204 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：fetchUserInfo
+2021-01-04 11:30:43.205 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：fetchTask
+2021-01-04 11:30:43.205 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：fetchTask
+2021-01-04 11:30:43.205 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-01-04 11:30:43.207 [restartedMain] INFO  com.zwb.demo.DemoApplication - Started DemoApplication in 6.213 seconds (JVM running for 7.337)
+2021-01-04 11:30:43.499 [RMI TCP Connection(1)-10.100.43.239] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-04 13:10:14.093 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m32s297ms326µs200ns).
+2021-01-04 15:14:28.782 [restartedMain] INFO  com.zwb.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-04 15:14:30.547 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+2021-01-04 15:14:30.548 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-04 15:14:30.548 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-01-04 15:14:30.664 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-01-04 15:14:31.147 [task-1] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-04 15:14:31.188 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.22.Final
+2021-01-04 15:14:31.283 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-04 15:14:31.285 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2021-01-04 15:14:31.293 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-04 15:14:31.293 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-04 15:14:31.294 [restartedMain] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2021-01-04 15:14:31.295 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-04 15:14:31.295 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-01-04 15:14:31.295 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-04 15:14:31.307 [task-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-01-04 15:14:31.392 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-01-04 15:14:31.467 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-01-04 15:14:31.480 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-01-04 15:14:32.295 [task-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-04 15:14:32.934 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-04 15:14:32.934 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-04 15:14:32.935 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-04 15:14:32.935 [restartedMain] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2021-01-04 15:14:32.935 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-04 15:14:32.936 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-04 15:14:32.936 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-04 15:14:32.936 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5c09888e
+2021-01-04 15:14:33.301 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+2021-01-04 15:14:33.518 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-04 15:14:33.887 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：test1
+2021-01-04 15:14:33.888 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：name1
+2021-01-04 15:14:33.888 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：fetchUserInfo
+2021-01-04 15:14:33.888 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：fetchTask
+2021-01-04 15:14:33.888 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：fetchTask
+2021-01-04 15:14:33.888 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-01-04 15:14:33.891 [restartedMain] INFO  com.zwb.demo.DemoApplication - Started DemoApplication in 6.233 seconds (JVM running for 7.43)
+2021-01-04 15:14:34.253 [RMI TCP Connection(2)-10.100.43.239] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-04 15:19:07.051 [restartedMain] INFO  com.zwb.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-04 15:19:08.776 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+2021-01-04 15:19:08.776 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-04 15:19:08.776 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-01-04 15:19:08.889 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-01-04 15:19:09.364 [task-1] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-04 15:19:09.403 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.22.Final
+2021-01-04 15:19:09.500 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-04 15:19:09.502 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2021-01-04 15:19:09.510 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-04 15:19:09.510 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-04 15:19:09.511 [restartedMain] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2021-01-04 15:19:09.511 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-04 15:19:09.512 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-01-04 15:19:09.512 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-04 15:19:09.518 [task-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-01-04 15:19:09.603 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-01-04 15:19:09.678 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-01-04 15:19:09.691 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-01-04 15:19:10.467 [task-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-04 15:19:11.091 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-04 15:19:11.092 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-04 15:19:11.092 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-04 15:19:11.093 [restartedMain] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2021-01-04 15:19:11.093 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-04 15:19:11.094 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-04 15:19:11.094 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-04 15:19:11.094 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1be6e19b
+2021-01-04 15:19:11.445 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+2021-01-04 15:19:11.663 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-04 15:19:12.026 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：test1
+2021-01-04 15:19:12.026 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：name1
+2021-01-04 15:19:12.026 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：fetchUserInfo
+2021-01-04 15:19:12.026 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：fetchTask
+2021-01-04 15:19:12.026 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：fetchTask
+2021-01-04 15:19:12.027 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-01-04 15:19:12.029 [restartedMain] INFO  com.zwb.demo.DemoApplication - Started DemoApplication in 6.089 seconds (JVM running for 7.181)
+2021-01-04 15:19:12.429 [RMI TCP Connection(2)-10.100.43.239] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-04 18:48:56.611 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m44s13ms797µs200ns).

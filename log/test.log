@@ -1,0 +1,53 @@
+2021-01-04 15:19:07.051 [restartedMain] INFO  com.zwb.demo.DemoApplication - No active profile set, falling back to default profiles: default
+2021-01-04 15:19:08.776 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8091"]
+2021-01-04 15:19:08.776 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-04 15:19:08.776 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-01-04 15:19:08.889 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-01-04 15:19:09.364 [task-1] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-04 15:19:09.403 [task-1] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.22.Final
+2021-01-04 15:19:09.500 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-04 15:19:09.502 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2021-01-04 15:19:09.510 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-04 15:19:09.510 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-04 15:19:09.511 [restartedMain] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2021-01-04 15:19:09.511 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-04 15:19:09.512 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-01-04 15:19:09.512 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-04 15:19:09.518 [task-1] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-01-04 15:19:09.603 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-01-04 15:19:09.678 [task-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-01-04 15:19:09.691 [task-1] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-01-04 15:19:10.467 [task-1] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-04 15:19:11.091 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-04 15:19:11.092 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-04 15:19:11.092 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-04 15:19:11.093 [restartedMain] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2021-01-04 15:19:11.093 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-04 15:19:11.094 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-01-04 15:19:11.094 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-04 15:19:11.094 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1be6e19b
+2021-01-04 15:19:11.445 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8091"]
+2021-01-04 15:19:11.663 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-01-04 15:19:12.026 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：test1
+2021-01-04 15:19:12.026 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：name1
+2021-01-04 15:19:12.026 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：fetchUserInfo
+2021-01-04 15:19:12.026 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：fetchTask
+2021-01-04 15:19:12.026 [restartedMain] INFO  定时任务的topic - 该定时任务不能执行：fetchTask
+2021-01-04 15:19:12.027 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2021-01-04 15:19:12.029 [restartedMain] INFO  com.zwb.demo.DemoApplication - Started DemoApplication in 6.089 seconds (JVM running for 7.181)
+2021-01-04 15:19:12.429 [RMI TCP Connection(2)-10.100.43.239] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-04 18:48:56.611 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m44s13ms797µs200ns).
