@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 
-
 /**
  * 定时任务执行的方法
  * @description: TODO
@@ -18,8 +17,8 @@ import org.springframework.stereotype.Component;
  * @date 2021/1/5 10:43
  */
 @Configuration
-@Component // 此注解必加
-@EnableScheduling // 此注解必加
+@Component
+@EnableScheduling
 public class SchedulerQuartzJobClass {
     /**
      * 执行的方法
