@@ -32,12 +32,4 @@ public interface SchedulerTasksRepository extends CrudRepository<SchedulerTasks,
      */
     @Cacheable(key = "#p0")
     SchedulerTasks findByName(String name);
-
-    /**
-     * 根据id更新字段
-     * @param schedulerTasks
-     * @return
-     */
-    @Cacheable(key = "#p1")
-    SchedulerTasks updateBySchedulerTasks(SchedulerTasks schedulerTasks);
 }
