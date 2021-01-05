@@ -13,7 +13,9 @@ import java.io.Serializable;
 @Table(name = "scheduler_task_t")
 @DynamicInsert
 @DynamicUpdate
-//@EntityListeners(CustomerAuditingEntityListener.class)
+/**
+ *@EntityListeners(CustomerAuditingEntityListener.class)
+ */
 public class SchedulerTasks extends BaseModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_scheduler_task_t_id")
@@ -31,26 +33,28 @@ public class SchedulerTasks extends BaseModel implements Serializable {
     private String jobClass;
 
     // 创建前事件
-    @PrePersist
-    public void PrePersist() {
-
-    }
-
-    // 创建后事件
-    @PostPersist
-    public void PostPersist() {
-
-    }
-
-    // 更新前事件
-    @PreUpdate
-    public void PreUpdate() {
-
-    }
-
-    // 更新后事件
-    @PostUpdate
-    public void PostUpdate() {
-
-    }
+//    @Override
+//    @PrePersist
+//    public void PrePersist() {
+//
+//    }
+//
+//    // 创建后事件
+//    @PostPersist
+//    public void PostPersist() {
+//
+//    }
+//
+//    // 更新前事件
+//    @Override
+//    @PreUpdate
+//    public void PreUpdate() {
+//
+//    }
+//
+//    // 更新后事件
+//    @PostUpdate
+//    public void PostUpdate() {
+//
+//    }
 }

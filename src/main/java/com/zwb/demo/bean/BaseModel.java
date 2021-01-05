@@ -46,6 +46,8 @@ public class BaseModel {
     @Column(name = "domain_name")
     private String domainName;
 
+    @Version
+    private Integer version;
     @PrePersist
     public void PrePersist(){
         this.setCreateTime(LocalDateTime.now());

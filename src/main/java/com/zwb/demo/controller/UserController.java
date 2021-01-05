@@ -22,11 +22,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @description: TODO
  * @param * @param null
+ * @author zhouw
+ * @description: TODO
  * @return
  * @throws
- * @author zhouw
  * @date 2021/1/2 14:18
  */
 @RestController
@@ -69,7 +69,7 @@ public class UserController {
      */
     @PostMapping("/startSchedulerJob")
     public String startSchedulerJob(@RequestBody SchedulerTasks schedulerTasks) throws SchedulerException {
-//        SchedulerTasks schedulerTasks = schedulerTasksRepository.findByName(schedulerTasks.getName());
+        //SchedulerTasks schedulerTasks1 = schedulerTasksRepository.findByName(schedulerTasks.getName());
         Scheduler scheduler = quartzSchedulerConfig.addJob(schedulerTasks);
         schedulerTasks.setStatus("1");
         schedulerTasksRepository.save(schedulerTasks);
