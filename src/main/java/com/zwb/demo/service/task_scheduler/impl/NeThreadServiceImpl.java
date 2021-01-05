@@ -9,8 +9,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class NeThreadServiceImpl implements NeThreadService {
+
+    private ApplicationContext applicationContext;
     @Autowired
-    ApplicationContext applicationContext;
+    public void setApplicationContext (ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
+    }
     @Override
     public void sendCmd(SchedulerTasks schedulerTasks) {
         SchedulerQuartzJobClass schedulerQuartzJobClass = (SchedulerQuartzJobClass) applicationContext.getBean(schedulerTasks.getJobClass());

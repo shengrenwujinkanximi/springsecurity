@@ -8,10 +8,23 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Component;
 
 
+/**
+ * 定时任务执行的方法
+ * @description: TODO
+ * @param * @param null
+ * @return
+ * @throws
+ * @author zhouw
+ * @date 2021/1/5 10:43
+ */
 @Configuration
 @Component // 此注解必加
 @EnableScheduling // 此注解必加
 public class SchedulerQuartzJobClass {
+    /**
+     * 执行的方法
+     * @param schedulerTasks
+     */
     public void sayHello(SchedulerTasks schedulerTasks) {
         try {
             Thread.sleep(6000);

@@ -13,16 +13,29 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author zhouw
+ */
 @Service
 @CacheConfig(cacheNames = "common_service")
 public class CommonService {
+    private UserRepository userRepository;
     @Autowired
-    UserRepository userRepository;
-    @Autowired
+    public void setUserRepository (UserRepository userRepository){
+        this.userRepository = userRepository;
+    }
+
     RolesRepository rolesRepository;
     @Autowired
-    UserRolesRepository userRolesRepository;
+    public void setRolesRepository (RolesRepository rolesRepository) {
+        this.rolesRepository = rolesRepository;
+    }
 
+    UserRolesRepository userRolesRepository;
+    @Autowired
+    public void setUserRolesRepository (UserRolesRepository userRolesRepository) {
+        this.userRolesRepository = userRolesRepository;
+    }
     public User findByUserName(String user_name){
         return userRepository.findByUserName(user_name);
     }

@@ -16,16 +16,32 @@ import java.util.logging.Logger;
 
 /**
  * 定时任务老方法，没法设置串行化
+ * @author zhouw
  */
 @Configuration
 @Slf4j(topic = "定时任务的topic")
 public class QuartzSchedulerConfig {
-    @Autowired
+
     private Scheduler scheduler;
+
     @Autowired
+    public void setScheduler(Scheduler scheduler) {
+        this.scheduler = scheduler;
+    }
+
     private SchedulerTasksRepository schedulerTasksRepository;
+
     @Autowired
-    ApplicationContext applicationContext;
+    public void setSchedulerTasksRepository(SchedulerTasksRepository schedulerTasksRepository) {
+        this.schedulerTasksRepository = schedulerTasksRepository;
+    }
+
+    private ApplicationContext applicationContext;
+
+    @Autowired
+    public void setApplicationContext(ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
+    }
 
     /**
      * 开始定时任务
@@ -101,8 +117,9 @@ public class QuartzSchedulerConfig {
     public void pauseJob(String name, String group) throws SchedulerException {
         JobKey jobKey = new JobKey(name, group);
         JobDetail jobDetail = scheduler.getJobDetail(jobKey);
-        if (jobDetail == null)
+        if (jobDetail == null) {
             return;
+        }
         scheduler.pauseJob(jobKey);
     }
 
@@ -125,8 +142,9 @@ public class QuartzSchedulerConfig {
     public void resumeJob(String name, String group) throws SchedulerException {
         JobKey jobKey = new JobKey(name, group);
         JobDetail jobDetail = scheduler.getJobDetail(jobKey);
-        if (jobDetail == null)
+        if (jobDetail == null) {
             return;
+        }
         scheduler.resumeJob(jobKey);
     }
 
@@ -140,8 +158,9 @@ public class QuartzSchedulerConfig {
     public void deleteJob(String name, String group) throws SchedulerException {
         JobKey jobKey = new JobKey(name, group);
         JobDetail jobDetail = scheduler.getJobDetail(jobKey);
-        if (jobDetail == null)
+        if (jobDetail == null) {
             return;
+        }
         scheduler.deleteJob(jobKey);
     }
 
@@ -160,13 +179,11 @@ public class QuartzSchedulerConfig {
              * 循环生成触发任务
              */
             SchedulerTasks schedulerTasks = schedulerTasksIterator.next();
-//            System.out.println("获取的定时任务数据：" + schedulerTasks.toString());
             String cron = schedulerTasks.getCron();
             String name = schedulerTasks.getName();
             String groupName = schedulerTasks.getGroupName();
             String methodName = schedulerTasks.getJobClass();
             String status = schedulerTasks.getStatus();
-//            logger.info("日志：" + status + "=====" + (Integer.parseInt(status) == 1));
             if (Integer.parseInt(status) == 1) {
                 System.out.println("这个是这个类：" + methodName);
                 addJob(schedulerTasks);

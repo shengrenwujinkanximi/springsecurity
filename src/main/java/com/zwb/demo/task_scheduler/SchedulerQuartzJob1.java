@@ -14,11 +14,17 @@ import javax.annotation.PostConstruct;
 public class SchedulerQuartzJob1 implements Job {
     public static SchedulerQuartzJob1 neTaskJob;
 
+    private NeThreadService neThreadService;
     @Autowired
-    NeThreadService neThreadService;
+    public void setNeThreadService (NeThreadService neThreadService) {
+        this.neThreadService = neThreadService;
+    }
 
     public SchedulerQuartzJob1(){}
-    //注入要调用的方法
+
+    /**
+     * 初始化
+     */
     @PostConstruct
     public void init(){
         neTaskJob = this;

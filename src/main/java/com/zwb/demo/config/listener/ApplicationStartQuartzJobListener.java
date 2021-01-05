@@ -10,10 +10,18 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.ContextRefreshedEvent;
+/**
+ * 启动springboot时就执行
+ * @author zhouw
+ */
 @Configuration
 public class ApplicationStartQuartzJobListener implements ApplicationListener<ContextRefreshedEvent> {
-    @Autowired
+
     private QuartzSchedulerConfig quartzSchedulerConfig;
+    @Autowired
+    public void setQuartzSchedulerConfig (QuartzSchedulerConfig quartzSchedulerConfig) {
+        this.quartzSchedulerConfig = quartzSchedulerConfig;
+    }
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         try {
