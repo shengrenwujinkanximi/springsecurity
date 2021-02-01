@@ -6,8 +6,10 @@ import com.zwb.demo.task_scheduler.SchedulerQuartzJobClass;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Component("neThreadService")
+@Service("neThreadService")
 public class NeThreadServiceImpl implements NeThreadService {
 
     private ApplicationContext applicationContext;
@@ -19,5 +21,9 @@ public class NeThreadServiceImpl implements NeThreadService {
     public void sendCmd(SchedulerTasks schedulerTasks) {
         SchedulerQuartzJobClass schedulerQuartzJobClass = (SchedulerQuartzJobClass) applicationContext.getBean(schedulerTasks.getJobClass());
         schedulerQuartzJobClass.sayHello(schedulerTasks);
+    }
+
+    public void sayHello(){
+        System.out.println("hello world!");
     }
 }

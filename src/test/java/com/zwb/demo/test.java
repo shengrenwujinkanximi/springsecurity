@@ -3,7 +3,12 @@ package com.zwb.demo;
 import jodd.http.HttpRequest;
 import logwire.web.service.ActionContext;
 import org.springframework.jdbc.core.CallableStatementCreator;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
+import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Method;
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -48,6 +53,18 @@ public class test {
     public static void main(String[] args) throws Exception {
         for (int i = 0; i < 120; i++) {
             System.out.println(String.format("%02d", i));
+        }
+        MultipartResolver multipartResolver = new StandardServletMultipartResolver();
+        HttpServletRequest httpServletRequest = null;
+        MultipartHttpServletRequest multipartHttpServletRequest = multipartResolver.resolveMultipart(httpServletRequest);
+        Map<String, MultipartFile> fileMap = multipartHttpServletRequest.getFileMap();
+        fileMap.forEach((k,v)->{
+            System.out.println(v.getName());
+        });
+        Iterator<String> fileNames = multipartHttpServletRequest.getFileNames();
+        while(fileNames.hasNext()){
+            String next = fileNames.next();
+
         }
 //        for (int i = 0; i < 10; i++) {
 //            if (i > 5) {
