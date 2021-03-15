@@ -6,7 +6,6 @@ import com.alibaba.excel.write.CellColorSheetWriteHandler;
 import com.alibaba.excel.write.metadata.WriteSheet;
 import com.alibaba.excel.write.metadata.fill.FillConfig;
 import com.alibaba.excel.write.metadata.fill.FillWrapper;
-import logwire.core.support.StreamUtil;
 
 import java.io.*;
 import java.util.*;
@@ -85,9 +84,9 @@ public class EasyExcelTest {
         Map map = new HashMap();
         FileInputStream fis = new FileInputStream("D:/Grea/projects/oppo/oppo-code/config/excel/template/gaizhang.jpg");
         ByteArrayOutputStream byteArrayOutputStream1 = new ByteArrayOutputStream();
-        StreamUtil.copyStream(fis, byteArrayOutputStream1);
-
-        map.put("byteArray", byteArrayOutputStream1.toByteArray());
+//        StreamUtil.copyStream(fis, byteArrayOutputStream1);
+//
+//        map.put("byteArray", byteArrayOutputStream1.toByteArray());
         excelWriter.fill(map, writeSheet);
         excelWriter.finish();
 
