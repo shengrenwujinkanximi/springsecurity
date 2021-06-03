@@ -28,8 +28,65 @@ public class ExcelUtil {
                 "C:\\Users\\zhouw\\Desktop\\2.xlsx"
         );
         String dirPath = "C:\\Users\\zhouw\\Desktop";
+        String str = "{\"\n" +
+                "  \"data\": [\n" +
+                "    {\n" +
+                "      \"SerialKey\": \"be308cdf-fbf3-d6dd-5e05-393010a0abca\",\n" +
+                "      \"SystemType\": \"01\",\n" +
+                "      \"OrderClassCode\": \"10\",\n" +
+                "      \"OrderClassName\": \"零售单\",\n" +
+                "      \"OrderTypeCode\": \"30\",\n" +
+                "      \"OrderTypeName\": \"小样\",\n" +
+                "      \"ProductClassCode\": \"610\",\n" +
+                "      \"ProductClassName\": \"小样选型\",\n" +
+                "      \"ServiceNum\": \"OPLCC襄汾县210300004CA\",\n" +
+                "      \"ServiceOrderNum\": \"F2101090001972\",\n" +
+                "      \"ContractNum\": \"OPLCC襄汾县210300004CA\",\n" +
+                "      \"OrderNum\": \"176943269\",\n" +
+                "      \"MTDSNum\": \"JS00026821031400001\",\n" +
+                "      \"OrderSelfNum\": \"OPLCC襄汾县210300004CA1-1小样\",\n" +
+                "      \"DealerCode\": \"S000268\",\n" +
+                "      \"DueDate\": \"2021-03-24T15:14:42\",\n" +
+                "      \"MatingCode\": \"A\",\n" +
+                "      \"FirstClassCode\": \"10\",\n" +
+                "      \"FirstClassName\": \"橱柜\",\n" +
+                "      \"LeaveBehind\": false,\n" +
+                "      \"StatusCode\": \"1024\",\n" +
+                "      \"BrandCode\": \"10\",\n" +
+                "      \"BrandName\": \"欧派\",\n" +
+                "      \"LineCode\": \"GC-XB188\",\n" +
+                "      \"LineName\": \"E6-1\",\n" +
+                "      \"Insurance\": false,\n" +
+                "      \"ProjectName\": null,\n" +
+                "      \"SaleDepartmentName\": \"CG-JXB027\",\n" +
+                "      \"CreateTime\": \"2021-03-24T18:25:24\",\n" +
+                "      \"DeskDueDate\": \"0001-01-01T00:00:00\",\n" +
+                "      \"LivePurchaseNum\": \"\",\n" +
+                "      \"LivePurchaseLine\": \"\",\n" +
+                "      \"LiveProjectNum\": \"\",\n" +
+                "      \"reqdate\": \"2021-04-10T00:00:00\",\n" +
+                "      \"StoreNo\": \"LS00026800002\",\n" +
+                "      \"StoreName\": \"襄汾橱柜店\",\n" +
+                "      \"CusName\": \"襄汾橱柜店\",\n" +
+                "      \"CusPhone\": \"18634792111\",\n" +
+                "      \"CusAddress\": \"襄汾县0000w海建材城欧派橱柜店\",\n" +
+                "      \"Receiver\": \"丁志荣\",\n" +
+                "      \"ReceiverProvince\": \"山西省\",\n" +
+                "      \"ReceiverCity\": \"临汾市\",\n" +
+                "      \"ReceiverAddress\": \"中国山西省临汾市襄汾县新城镇瑆海建材城欧派橱柜\",\n" +
+                "      \"SpecialOrder\": null,\n" +
+                "      \"Channel\": \"欧派零售\",\n" +
+                "      \"KitStrategy\": \"002\",\n" +
+                "      \"Details\": null\n" +
+                "    }\n" +
+                "  ],\n" +
+                "  \"MsgKeyID\": \"be308cdf-fbf3-d6dd-5e05-393010a0abca\",\n" +
+                "  \"ApiName\": \"MSCSMainOrderOverview\",\n" +
+                "  \"optionType\": \"ADD\"\n" +
+                "}";
+        System.out.println(str.replace("{\"", "{").trim());
         String fileName = "merge" + System.currentTimeMillis() + ".xlsx";
-        mergexcel(list, fileName, dirPath);
+//        mergexcel(list, fileName, dirPath);
 //        File file = new File(dirPath + "\\" + fileName);
 //        file.delete();
         System.out.println("OJBK");
@@ -147,9 +204,12 @@ public class ExcelUtil {
      */
     private static void copyRow(SXSSFWorkbook wb, XSSFRow oldRow, SXSSFRow toRow) {
         toRow.setHeight(oldRow.getHeight());
+        int cellNum = 0;
         for (Iterator cellIt = oldRow.cellIterator(); cellIt.hasNext(); ) {
             XSSFCell tmpCell = (XSSFCell) cellIt.next();
             SXSSFCell newCell = toRow.createCell(tmpCell.getColumnIndex());
+            System.out.println("行复制功能" + cellNum);
+            cellNum++;
             copyCell(wb, tmpCell, newCell);
         }
     }
@@ -169,8 +229,10 @@ public class ExcelUtil {
         for (int i = 0; i <= length; i++) {
             toSheet.setColumnWidth(i, fromSheet.getColumnWidth(i));
         }
-
+        int rowNum = 0;
         for (Iterator rowIt = fromSheet.rowIterator(); rowIt.hasNext(); ) {
+            System.out.println("rowNum " + rowNum);
+            rowNum++;
             XSSFRow oldRow = (XSSFRow) rowIt.next();
             SXSSFRow newRow = toSheet.createRow(oldRow.getRowNum());
             copyRow(wb, oldRow, newRow);
